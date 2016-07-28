@@ -12,7 +12,7 @@ void setup() {
 }
 
 void draw() { 
-  background(99,252,167);
+  background(99,252,167); //background color
   
   if ((mouseX > 200) && (mouseX < 600) &&
     (mouseY > 150) && (mouseY < 450)) {
@@ -21,14 +21,14 @@ void draw() {
     background(252,199,239);//pink
   }
   
-   if (keyPressed == true) { 
+   if (keyPressed == true) { //when a key is pressed, it will show a house
     fill(19,42,185);
    triangle(400,50,100,220,700,220);
    fill(135,149,242);
    rect(150,220,500,200);
    }
 
-if ((keyPressed == true) && ((key == 'S') || (key == 's'))){//snow
+if ((keyPressed == true) && ((key == 'S') || (key == 's'))){//when key 's' or 'S' is pressed it will show snow
   fill(255);
   ellipse(100,200,15,15);
   ellipse(450,100,10,10);
@@ -42,10 +42,10 @@ if ((keyPressed == true) && ((key == 'S') || (key == 's'))){//snow
   ellipse(720,330,18,18);
 }
 
-fill(255);
+fill(255); //snow will start to fall
 snow=snow+speed;
  fill(255);
-  ellipse(100,snow+150,15,15);
+  ellipse(100,snow+150,15,15); //each snow falling from different height
   ellipse(450,snow+100,10,10);
   ellipse(600,snow+70,25,25);
   ellipse(350,snow+120,18,18);
@@ -56,7 +56,7 @@ snow=snow+speed;
  ellipse(50,snow+10,20,20);
   ellipse(720,snow+39,18,18);
 
-if(hot == true){
+if(hot == true){ //showing text 'hot~~'
   textSize(42);
   fill(random(255),random(255),random(255));
   text("Hot~~",600,70);
@@ -84,14 +84,14 @@ if(hot == true){
   ellipse(x, y, 82, 82); //top
   fill(255,0,0);//red eyes
   }
-ellipse(x-15,y-5,15,15);//eyes
-ellipse(x+15,y-5,15,15);
+ellipse(x-15,y-5,15,15);//left eye
+ellipse(x+15,y-5,15,15);//right eye
  
-fill(255,198,10);//hat
+fill(255,198,10);//draw an orange hat
 ellipse(ix,y-35,120,20);
 rect(ix-27,y-75,56,35);
 
-  if (mouseButton == LEFT) {//second snowman
+  if (mouseButton == LEFT) {//three buttons on snowman
     fill(247,232,110);
   ellipse(x,y+50,10,10);
   ellipse(x,y+68,10,10);
@@ -103,7 +103,7 @@ if (mousePressed == true) {
     cursor(CROSS);
 }
 }
-void keyPressed(){
+void keyPressed(){ //when key 'UP' is pressed, the word'hot~~' will appear
   if(key == CODED){
     if (keyCode == UP){
       hot = true;
